@@ -8,10 +8,7 @@ namespace WebApplication2.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-
         public string? Id { get; set; }
-
-        public int? fighterId { get; set; }
 
         public string firstName { get; set; } = null!;
 
@@ -23,10 +20,8 @@ namespace WebApplication2.Models
 
         public string height { get; set; } = null!;
 
+        public string image { get; set; } = null!;
 
 
-        [BsonElement("items")]
-        [JsonPropertyName("items")]
-        public List<string> fighterIds { get; set; } = null!;
     }
 }

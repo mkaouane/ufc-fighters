@@ -25,7 +25,8 @@ namespace WebApplication2.Services
         public async Task CreateAsync(Fighters fighters) {
             await _fightersCollection.InsertOneAsync(fighters); 
         }
-        public async Task AddToFightersAsync(string id, string fighterId) { }
+        public async Task AddToFightersAsync(string id, string fighterId) {
+        }
         public async Task DeleteAsync(string id) { }
 
 

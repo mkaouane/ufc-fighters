@@ -30,6 +30,20 @@ namespace WebApplication2.Controllers
             return CreatedAtAction(nameof(Get), new { id = fighters.Id }, fighters);
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(string id, [FromBody]string fighterId)
+        {
+            await _mongoDBService.AddToFightersAsync(id, fighterId);
+                return NoContent();
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(string id)
+        {
+            await _mongoDBService.DeleteAsync(id);
+            return NoContent();
+        }
+
 
     }
 }
